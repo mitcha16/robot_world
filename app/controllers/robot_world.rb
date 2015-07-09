@@ -1,10 +1,5 @@
-require 'models/robot_directory'
-require 'models/presenter'
 
 class RobotWorldApp < Sinatra::Base
-  set :root, File.join(File.dirname(__FILE__), '..')
-  set :method_override, true
-
   get "/" do
     @presenter = Presenter.new
     erb :dashboard
@@ -18,7 +13,6 @@ class RobotWorldApp < Sinatra::Base
   get "/robots/new" do
     erb :new
   end
-
 
   post "/robots" do
     RobotDirectory.create(params[:robot])
