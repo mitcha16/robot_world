@@ -1,10 +1,12 @@
 require 'models/robot_directory'
+require 'models/presenter'
 
 class RobotWorldApp < Sinatra::Base
   set :root, File.join(File.dirname(__FILE__), '..')
   set :method_override, true
 
   get "/" do
+    @presenter = Presenter.new
     erb :dashboard
   end
 
@@ -37,7 +39,7 @@ class RobotWorldApp < Sinatra::Base
     RobotDirectory.update(id.to_i, params[:robot])
     redirect "robots/#{id}"
   end
-  
+
   delete '/robots/:id' do |id|
     RobotDirectory.delete(id.to_i)
     redirect '/robots'

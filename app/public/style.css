@@ -5,15 +5,36 @@ html{
 }
 
 body{
+
   letter-spacing: 2px;
   padding: 10px;
   width: 950px;
-  height: auto;
+  height: 680px;
   max-height: 100%;
   margin: 0 auto;
   background: rgba(255,255,255,0.5);
   border: 4px outset #4f1606;
   box-shadow: -15px -8px 20px 10px rgba(120, 120, 120, 0.8);
+}
+
+ul link{
+  font-size: 18px;
+  font-weight: bolder;
+  color: #00D503;
+  background: black;
+}
+ul a:link{
+  background-color: black;
+  color: #00D503;
+}
+
+ul a:visited{
+  color: #00D503;
+}
+
+a:hover{
+  font-size: 25px;
+  transition: all 2s ease-in-out;
 }
 
 h2{
@@ -40,9 +61,30 @@ input{
   margin-left: 25px;
 }
 
+#robot h3{
+  margin: auto;
+  width: 500px;
+  letter-spacing: 10px;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #000;
+}
 #robot{
   margin: auto;
   width: 500px;
+}
+
+#stat {
+  box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+  padding: 15px;
+  color: #00D503;
+  background-color: black;
+  font-weight: bolder;
+}
+h3{
+  letter-spacing: 4px;
+  color: white;
+  font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+  text-shadow: 3px 3px 2px black, 4px 4px 0px rgba(0,0,0,0.9);
 }
 img{
   margin-left: 25%;

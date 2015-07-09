@@ -4,3 +4,18 @@
   <li><a href="/robots">Robots</a></li>
   <li><a href="/robots/new">Create a New Robot</a></li>
 </ul>
+<h2>Information</h2>
+<div id= "stat">
+<h3> Average age: <%=@presenter.average_age%> </h3>
+<%@presenter.group_by_year.each do |key, value|%>
+<%= value.length %> robots were hired in <%= key %>
+<% end %></br>
+
+<%@presenter.group_by_department.each do |key, value|%>
+<h3> Department: <%= key %></h3> Number of Robots: <%= value.size %>
+<% end %></br>
+
+<%@presenter.group_by_city.each do |key, value|%>
+<h3> City: <%= key %></h3> Number of Robots: <%= value.size %>
+<% end %></br>
+ </div>
